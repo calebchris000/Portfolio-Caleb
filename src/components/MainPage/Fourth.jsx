@@ -23,17 +23,17 @@ const AboutMe = () => {
       <div className="flex flex-col gap-4">
         <Icon
           className="devicon-github-original scale-[1.4]"
-          containerClasses="w-20 h-20 cursor-pointer"
+          containerClasses="w-[5rem!important] h-[5rem!important] cursor-pointer"
           onClick={() => (window.location.href = "https://github.com/calebchris000")}
         />
         <Icon
           className="devicon-linkedin-plain scale-[1.4]"
-          containerClasses="w-20 h-20 cursor-pointer"
+          containerClasses="w-[5rem!important] h-[5rem!important] cursor-pointer"
           onClick={() => (window.location.href = "https://linkedin.com/in/calebchris000")}
         />
         <Icon
           className="devicon-twitter-plain scale-[1.4]"
-          containerClasses="w-20 h-20 cursor-pointer"
+          containerClasses="w-[5rem!important] h-[5rem!important] cursor-pointer"
           onClick={() => (window.location.href = "https://twitter.com/calebchris000")}
         />
       </div>
