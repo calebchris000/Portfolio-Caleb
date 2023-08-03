@@ -1,5 +1,7 @@
 import Contact from "../components/MainPage/Contact";
-import Middle from "../components/MainPage/Middle";
+import AboutMe from "../components/MainPage/Fourth";
+import Second from "../components/MainPage/Second";
+import Skills from "../components/MainPage/Third";
 import Top from "../components/MainPage/Top";
 import Navbar from "../components/Navbar";
 
@@ -8,7 +10,9 @@ const Main = () => {
     <main className=" font-poppins z-[99999]">
       <Navbar />
       <Top />
-      <Middle />
+      <Second />
+      <Skills />
+      <AboutMe />
       <Contact />
     </main>
   );

@@ -21,7 +21,7 @@ const Card = ({ image, title, description, url }) => {
   );
 };
 
-const Middle = () => {
+const Second = () => {
   return (
     <section className="mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
@@ -61,7 +61,7 @@ const Middle = () => {
   );
 };
 
-export default Middle;
+export default Second;
 
 Card.propTypes = {
   image: PropTypes.string.isRequired,

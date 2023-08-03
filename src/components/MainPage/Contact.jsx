@@ -1,20 +1,20 @@
 const Contact = () => {
   return (
-    <section className="mx-auto mb-10 w-[100%] font-poppins mt-52 text-center">
+    <section id="contact" className="mx-auto mb-10 w-[100%] font-poppins mt-52 text-center">
       <h2 className="text-2xl mb-20">Contact Me</h2>
 
-      <form action="" className="mx-auto bg-[#002d80] w-[30%] p-5">
+      <form action="" className="mx-auto bg-gray-700 w-[30%] p-5">
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             NAME
           </label>
-          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-white p-4" type="text" placeholder="Mark Rober" required />
+          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4" type="text" placeholder="Mark Rober" required />
         </div>
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             EMAIL
           </label>
-          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-white p-4" type="email" placeholder="markrober@mail.com" required />
+          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4" type="email" placeholder="markrober@mail.com" required />
         </div>
 
         <div className="flex flex-col mx-10 justify-center my-10">
@@ -22,7 +22,7 @@ const Contact = () => {
             EMAIL
           </label>
           <textarea
-            className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-white p-4 h-40"
+            className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4 h-40"
             type="email"
             placeholder="markrober@mail.com"
             required
