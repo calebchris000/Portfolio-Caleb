@@ -8,23 +8,33 @@ const Contact = () => {
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             NAME
           </label>
-          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4" type="text" placeholder="Mark Rober" required />
+          <input
+            className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4"
+            type="text"
+            placeholder="Mark Rober"
+            required
+          />
         </div>
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             EMAIL
           </label>
-          <input className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4" type="email" placeholder="markrober@mail.com" required />
+          <input
+            className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4"
+            type="email"
+            placeholder="markrober@mail.com"
+            required
+          />
         </div>
 
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
-            EMAIL
+            CONTENT
           </label>
           <textarea
             className=" outline-none bg-white placeholder:text-[#000a1d] border border-[#000a1d] text-[#000a1d] p-4 h-40"
             type="email"
-            placeholder="markrober@mail.com"
+            placeholder="E.g 'Hello Caleb...'"
             required
           ></textarea>
         </div>

@@ -27,12 +27,6 @@ const Second = () => {
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
       <div className="flex flex-wrap gap-10 w-[80%] mx-auto justify-center">
         <Card
-          image={Bookstore}
-          url={"https://bookstore-redefined.vercel.app/"}
-          title="BookStore Redefined"
-          description="Create a book collection and share them online to your friends and family."
-        />
-        <Card
           image={Appointment}
           title="Book An Appointment"
           url={"https://book-an-appointment-frontend.onrender.com/"}
@@ -50,6 +44,13 @@ const Second = () => {
           description="Track your valuable time with the Pomodoro Timer. Set custom time that fits your schedule."
           url={"https://pomodoro-mobile.netlify.app/"}
         />
+        <Card
+          image={Bookstore}
+          url={"https://bookstore-redefined.vercel.app/"}
+          title="BookStore Redefined"
+          description="Create a book collection and share them online to your friends and family."
+        />
+
         <Card
           image={TVSeries}
           title="TV Series Watch"
