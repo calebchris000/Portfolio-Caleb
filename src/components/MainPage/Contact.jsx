@@ -1,6 +1,11 @@
+import { useEffect } from "react";
+import { FadeIn } from "../../app/miscellaneous/FadeIn";
+
 const Contact = () => {
+  useEffect(() => {FadeIn('.contact')}, [])
+
   return (
-    <section id="contact" className="mx-auto mb-10 w-[100%] font-poppins mt-52 text-center">
+    <section id="contact" className="contact mx-auto mb-10 w-[100%] font-poppins mt-52 text-center">
       <h2 className="text-2xl mb-20">Contact Me</h2>
 
       <form action="" className="mx-auto bg-gray-700 w-[30%] p-5">

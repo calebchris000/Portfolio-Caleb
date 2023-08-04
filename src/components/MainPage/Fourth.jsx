@@ -1,8 +1,12 @@
+import { useEffect } from "react";
+import { FadeIn } from "../../app/miscellaneous/FadeIn";
 import { Icon } from "./Third";
 
 const AboutMe = () => {
+  useEffect(() => {FadeIn('.aboutme')}, [])
+
   return (
-    <section className="mx-auto flex gap-[10rem] justify-between items-center mb-10 w-[60%] font-poppins mt-52 tracking-wide leading-relaxed text-left">
+    <section className="aboutme mx-auto flex gap-[10rem] justify-between items-center mb-10 w-[60%] font-poppins mt-52 tracking-wide leading-relaxed text-left">
       <div className="w-[50%]">
         <h2 className="text-2xl mb-10">About Me</h2>
 

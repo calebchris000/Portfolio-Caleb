@@ -4,10 +4,12 @@ import Covid19 from "../../assets/Covid19.png";
 import Pomodoro from "../../assets/Pomodoro2.png";
 import TVSeries from "../../assets/TVSeries.png";
 import PropTypes from "prop-types";
+import { useEffect } from "react";
+import { FadeIn } from "../../app/miscellaneous/FadeIn.js";
 
 const Card = ({ image, title, description, url }) => {
   function handleClick() {
-    window.location.href = url;
+    window.open(url, '_break')
   }
   return (
     <div className="border cursor-pointer p-5 border-gray-700 h-[24rem] w-[20rem] hover:scale-105 transition-all ease-in-out" onClick={handleClick}>
@@ -22,8 +24,11 @@ const Card = ({ image, title, description, url }) => {
 };
 
 const Second = () => {
+  useEffect(() => {
+    FadeIn(".second");
+  }, []);
   return (
-    <section className="mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
+    <section className="second opacity-0  mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
       <div className="flex flex-wrap gap-10 w-[80%] mx-auto justify-center">
         <Card

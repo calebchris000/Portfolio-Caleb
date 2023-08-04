@@ -1,0 +1,45 @@
+.top-anim {
+  animation: wave 1s infinite;
+  animation-delay: 1s;
+  transform-origin: bottom right;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg); /* Adjust the angle as per your waving style */
+  }
+}
+
+.visible {
+  transition: all 600ms ease-in-out;
+  opacity: 1 !important;
+  transform: translateY(0px);
+}
+
+.invisible {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.clip-text {
+  background: linear-gradient(to right, #8e2de2, #4a00e0) !important;
+  -webkit-background-clip: text !important;
+  color: transparent;
+  background-clip: text !important;
+  animation: clipAnimation 2s infinite;
+}
+
+@keyframes clipAnimation {
+  0% {
+    background: linear-gradient(to right, #ead4fd, #4a00e0) !important;
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+    background: linear-gradient(to right, #ead4fd, #4a00e0) !important;
+  }
+}
