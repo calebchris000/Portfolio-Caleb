@@ -12,11 +12,11 @@ const Card = ({ image, title, description, url }) => {
     window.open(url, '_break')
   }
   return (
-    <div className="border cursor-pointer p-5 border-gray-700 h-[24rem] w-[20rem] hover:scale-105 transition-all ease-in-out" onClick={handleClick}>
-      <img className="w-full h-36" src={image} alt="" />
+    <div className="border-2 cursor-pointer overflow-hidden p-5 border-[#59caff] h-[24rem] w-[20rem] hover:scale-105 transition-all ease-in-out" onClick={handleClick}>
+      <img className="w-full" src={image} alt="" />
 
       <div>
-        <h3 className="text-xl text-left my-10">{title}</h3>
+        <h3 className="text-xl text-left text-[#59caff] my-20 mb-2">{title}</h3>
         <p className="text-left w-[70%] text-[#8b9cbb] text-sm">{description}</p>
       </div>
     </div>
@@ -30,7 +30,7 @@ const Second = () => {
   return (
     <section className="second opacity-0  mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
-      <div className="flex flex-wrap gap-10 w-[80%] mx-auto justify-center">
+      <div className="flex flex-wrap gap-5 w-[80%] mx-auto justify-center">
         <Card
           image={Appointment}
           title="Book An Appointment"

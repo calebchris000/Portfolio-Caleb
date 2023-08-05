@@ -13,7 +13,6 @@ export function FadeIn(className) {
         }
       });
   
-      console.log(className);
     });
     observer.observe(element);
   }

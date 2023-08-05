@@ -1,32 +1,77 @@
 import PropTypes from "prop-types";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { FadeIn } from "../../app/miscellaneous/FadeIn";
+import ProgressBar from "@ramonak/react-progress-bar";
+const Proficiency = ({ level, className, hovered, title }) => {
+  return (
+    <div className={`proficiency absolute w-32 opacity-0 transition-all ${className}  h-5 ${hovered ? "opacity-[1] bottom-[1.4rem]" : "opacity-0 bottom-0"}`}>
+      <p className="text-left text-xs mb-1">{title}</p>
+      <ProgressBar
+        completed={level}
+        className={`text-white p-0 text-center w-full`}
+        barContainerClassName="bg-[#fff]"
+        bgColor="#59caff"
+        labelSize="12px"
+        labelColor="#051638"
+      />
+    </div>
+  );
+};
+export const Icon = ({ className, containerClasses, onClick, id, level, label }) => {
+  const [hovered, setHovered] = useState(false);
+  function handleMouseEnter() {
+    setHovered(true);
+  }
 
-export const Icon = ({ className, containerClasses, onClick }) => (
-  <div className={`${containerClasses || ""} border-[4px] border-gray-700 transition-all hover:bg-gray-700 rounded-full w-40 h-40 flex justify-center items-center`} onClick={onClick}>
-    <i className={`${className} block scale-[3]`}></i>
-  </div>
-);
+  function handleMouseLeave() {
+    setHovered(false);
+  }
+
+  return (
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className={`${
+        containerClasses || ""
+      } relative border-[3px] rounded-full border-[#59caff] hover:border-[#051638] transition-all hover:bg-[#051638] w-40 h-40 flex justify-center items-center ${
+        hovered ? "rounded-none" : "rounded-[50%]"
+      }`}
+      onClick={onClick}
+    >
+      <i id={id} className={`${className} text-5xl transition-all flex flex-col ${hovered ? "text-3xl translate-y-[-30px]" : "text-4xl translate-y-[0]"} `}>
+        <p
+          className={` text-sm font-poppins absolute  bottom-8 left-0 right-0 text-center opacity-0 translate-y-[2.6rem] font-semibold ${
+            hovered ? " relative text-sm opacity-[1]" : "text-md opacity-0"
+          }`}
+        >
+          {label}
+        </p>
+      </i>
+      <Proficiency hovered={hovered} title={"Proficiency"} level={level} />
+    </div>
+  );
+};
 
 const Skills = () => {
-
-  useEffect(() => {FadeIn('.skills')}, [])
+  useEffect(() => {
+    FadeIn(".skills");
+  }, []);
 
   return (
     <section className="skills mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Featured Skills</h2>
 
       <div className="flex flex-wrap mx-auto w-[60%] gap-10 justify-center">
-        <Icon className="devicon-html5-plain colored" />
-        <Icon className="devicon-css3-plain colored" />
-        <Icon className="devicon-javascript-plain colored" />
-        <Icon className="devicon-typescript-plain colored" />
-        <Icon className="devicon-bootstrap-plain colored" />
-        <Icon className="devicon-tailwindcss-plain colored" />
-        <Icon className="devicon-redux-original colored" />
-        <Icon className="devicon-ruby-plain colored" />
-        <Icon className="devicon-rails-plain colored" />
-        <Icon className="devicon-python-plain colored" />
+        <Icon id={"html"} className="devicon-html5-plain colored" level={90} label={"HTML"} />
+        <Icon id={"css"} className="devicon-css3-plain colored" level={90} label={"CSS"} />
+        <Icon id={"js"} className="devicon-javascript-plain colored" level={90} label={"JAVASCRIPT"} />
+        <Icon id={"ts"} className="devicon-typescript-plain colored" level={80} label={"TYPESCRIPT"} />
+        <Icon id={"bootstrap"} className="devicon-bootstrap-plain colored" level={80} label={"BOOTSTRAP"} />
+        <Icon id={"tailwind"} className="devicon-tailwindcss-plain colored" level={80} label={"TAILWINDCSS"} />
+        <Icon id={"redux"} className="devicon-redux-original colored" level={70} label={"REDUX JS"} />
+        <Icon id={"ruby"} className="devicon-ruby-plain colored" level={60} label={"RUBY"} />
+        <Icon id={"rails"} className="devicon-rails-plain colored" level={70} label={"RAILS"} />
+        <Icon id={"python"} className="devicon-python-plain colored" level={60} label={"PYTHON"} />
       </div>
     </section>
   );
@@ -35,7 +80,17 @@ const Skills = () => {
 Icon.propTypes = {
   className: PropTypes.string.isRequired,
   containerClasses: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  level: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+};
+
+Proficiency.propTypes = {
+  level: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  hovered: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Skills;

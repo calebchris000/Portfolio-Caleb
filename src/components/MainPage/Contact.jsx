@@ -8,7 +8,7 @@ const Contact = () => {
     <section id="contact" className="contact mx-auto mb-10 w-[100%] font-poppins mt-52 text-center">
       <h2 className="text-2xl mb-20">Contact Me</h2>
 
-      <form action="" className="mx-auto bg-gray-700 w-[30%] p-5">
+      <form action="" className="mx-auto bg-[#082255] w-[30%] p-5 px-2">
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             NAME
@@ -44,7 +44,7 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        <button type="submit" className="border border-[#002d80] font-semibold w-fit mx-auto hover:bg-[#0a52da] transition-colors bg-[#00143a] block p-6 px-24">
+        <button type="submit" className="border border-[#fff] font-semibold w-fit mx-auto hover:bg-[#0a52da] text-[#103372] transition-colors bg-[#fff] block p-6 px-24">
           Submit
         </button>
       </form>
