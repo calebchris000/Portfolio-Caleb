@@ -37,7 +37,7 @@ export const Icon = ({ className, containerClasses, onClick, id, level, label })
       }`}
       onClick={onClick}
     >
-      <i id={id} className={`${className} third-devicon text-5xl transition-all flex flex-col ${hovered ? "text-3xl hidden lg:translate-y-[-30px]" : "text-4xl block lg:translate-y-[0]"} `}>
+      <i id={id} className={`${className} third-devicon text-5xl transition-all flex flex-col ${hovered ? "text-3xl hidden lg:block lg:translate-y-[-30px]" : "text-4xl block lg:translate-y-[0]"} `}>
         <p
           className={` text-sm font-poppins absolute  bottom-8 left-0 right-0 text-center opacity-0 translate-y-[2.6rem] font-semibold hidden lg:block ${
             hovered ? " relative text-sm opacity-[1]" : "text-md opacity-0"
