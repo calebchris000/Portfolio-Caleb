@@ -1,10 +1,13 @@
+.nav-lite {
+
+}
+
+
 .top-anim {
   animation: wave 1s infinite;
   animation-delay: 1s;
   transform-origin: bottom right;
 }
-
-
 
 ::-webkit-scrollbar {
   width: 0.875rem;
@@ -36,15 +39,14 @@
   /* animation: noradius 3s forwards; */
 }
 
-.flatten  {
-  transform: translateY(-30px) scale(2)
+.flatten {
+  transform: translateY(-30px) scale(2);
 }
 
 .scale {
   transform: scale(5);
   opacity: 1;
 }
-
 
 @keyframes wave {
   0%,
@@ -89,8 +91,8 @@
 .proficiency span {
   padding: 0 !important;
   /* font-size: 2rem; */
+  color: white;
 }
-
 
 .animated-element {
   width: 200px;
@@ -105,10 +107,6 @@
   border-radius: 10px;
 }
 
-.navigation {
-  background-color: red;
-}
-
 /* Define the border-radius value on hover */
 .animated-element:hover {
   border-radius: 50%;
@@ -120,11 +118,72 @@
 }
 
 .nav-fixed {
- height: 6rem !important;
- opacity: 1;
+  height: 6rem !important;
+  opacity: 1;
 }
 
 .nav-static {
   height: 0 !important;
   opacity: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .navigation {
+    display: none !important;
+  }
+
+  .top-holder {
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  .clip-text {
+    font-size: 2rem !important;
+  }
+
+  .top-lets-start {
+    width: 100%;
+  }
+
+  .top-see-resume {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+
+  .third-icon-holders {
+    width: 80% !important;
+  }
+
+  .third-icon {
+    width: 5rem !important;
+    height: 5rem !important;
+  }
+  .third-devicon {
+    font-size: 2rem !important;
+  }
+
+  .aboutme {
+    margin: 0 auto;
+  }
+
+  .contact div {
+    margin: 0.8rem;
+  }
+
+  .contact *::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .contact label {
+    font-size: 0.7rem;
+  }
+
+  .contact input {
+    padding: 0.3rem;
+  }
+  .contact-submit {
+    padding: 0.8rem 3rem !important;
+  }
 }

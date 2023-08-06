@@ -12,7 +12,7 @@ const Card = ({ image, title, description, url }) => {
     window.open(url, '_break')
   }
   return (
-    <div className="border-2 cursor-pointer overflow-hidden p-5 border-[#59caff] h-[24rem] w-[20rem] hover:scale-105 transition-all ease-in-out" onClick={handleClick}>
+    <div className="border-2 cursor-pointer overflow-hidden p-5 border-[#002d80] bg-[#00143a] h-[24rem] w-[20rem] hover:scale-105 transition-all ease-in-out" onClick={handleClick}>
       <img className="w-full" src={image} alt="" />
 
       <div>
@@ -28,9 +28,9 @@ const Second = () => {
     FadeIn(".second");
   }, []);
   return (
-    <section className="second opacity-0  mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
+    <section className="second opacity-0 mx-auto mb-10 font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
-      <div className="flex flex-wrap gap-5 w-[80%] mx-auto justify-center">
+      <div className="flex flex-wrap gap-5 mx-auto justify-center">
         <Card
           image={Appointment}
           title="Book An Appointment"

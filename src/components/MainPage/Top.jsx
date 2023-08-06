@@ -37,8 +37,8 @@ const Top = () => {
   };
 
   return (
-    <section className="mx-auto w-[100%] font-poppins relative mt-52 ">
-      <div className="flex flex-col justify-center w-[60%] mx-auto text-center gap-10">
+    <section className="mx-auto font-poppins relative mt-52 ">
+      <div className="top-holder flex flex-col justify-center  mx-auto text-center gap-10">
         <img className="w-48 rounded-full mx-auto" src={Profile} alt="" />
 
         <div className="flex gap-2 items-center justify-center">
@@ -47,7 +47,7 @@ const Top = () => {
         </div>
         <h1 className="clip-text top-description text-7xl tracking-normal leading-tight">Build Enterprise Products, brands and experiences.</h1>
         <ContactIcons />
-        <div className="flex justify-center gap-5">
+        <div className="flex flex-wrap justify-center gap-5">
           <button
             className="top-lets-start border border-[#002d80] font-bold w-fit hover:bg-[#0a52da] transition-all hover:scale-[1.06] bg-[#00143a] block p-6 px-24"
             onClick={handleButtonClick}
@@ -56,7 +56,7 @@ const Top = () => {
           </button>
 
             <button
-              className="font-bold flex items-center justify-center gap-3 transition-all w-fit hover:bg-[#fff] hover:text-[#00143a] hover:scale-[1.06] bg-[#0a52da] p-6 px-24"
+              className="top-see-resume font-bold flex items-center justify-center gap-3 transition-all w-fit hover:bg-[#fff] hover:text-[#00143a] hover:scale-[1.06] bg-[#0a52da] p-6 px-24"
               onClick={() => (window.open("https://docs.google.com/document/d/1xxsSqcwstPCdLpu6bZpOuAqogLW0-4398u9ybZOsDls/edit?usp=sharing", '_blank'))}
             >
               SEE MY RESUME <HiExternalLink className="w-5 h-5" />

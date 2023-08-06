@@ -9,13 +9,15 @@ import Navbar from "../components/Navbar";
 const Main = () => {
   return (
     <main className=" font-poppins z-[99999]">
-      <Navbar />
-      <Top />
-      <Second />
-      <Skills />
-      <AboutMe />
-      <Contact />
-      <Footer />
+      <div className="w-[80%] mx-auto">
+        <Navbar />
+        <Top />
+        <Second />
+        <Skills />
+        <AboutMe />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 };

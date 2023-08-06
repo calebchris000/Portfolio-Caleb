@@ -5,7 +5,7 @@ const AboutMe = () => {
   useEffect(() => {FadeIn('.aboutme')}, [])
 
   return (
-    <section className="aboutme mx-auto flex flex-col gap-[4rem] justify-between items-center w-[30%] font-poppins mt-52 tracking-wide leading-relaxed">
+    <section className="aboutme mx-auto flex lg:w-[60%] flex-col gap-[4rem] justify-between items-center font-poppins mt-52 tracking-wide leading-relaxed">
         <h2 className="text-2xl">About Me</h2>
 
         <p className="text-[1.1rem]">

@@ -4,15 +4,15 @@ import { FadeIn } from "../../app/miscellaneous/FadeIn";
 import ProgressBar from "@ramonak/react-progress-bar";
 const Proficiency = ({ level, className, hovered, title }) => {
   return (
-    <div className={`proficiency absolute w-32 opacity-0 transition-all ${className}  h-5 ${hovered ? "opacity-[1] bottom-[1.4rem]" : "opacity-0 bottom-0"}`}>
+    <div className={`proficiency absolute w-32 opacity-0 transition-all ${className}  h-5 ${hovered ? "opacity-[1] bottom-[1.7rem]" : "opacity-0 bottom-0"}`}>
       <p className="text-left text-xs mb-1">{title}</p>
       <ProgressBar
         completed={level}
-        className={`text-white p-0 text-center w-full`}
-        barContainerClassName="bg-[#fff]"
-        bgColor="#59caff"
-        labelSize="12px"
-        labelColor="#051638"
+        className={`text-white p-0 text-center w-full border border-[#00143a]`}
+        barContainerClassName="bg-[#fff] bg-[#59caff] text-white"
+        bgColor="#002d80"
+        labelSize="14px"
+        labelColor="#fff"
       />
     </div>
   );
@@ -33,12 +33,12 @@ export const Icon = ({ className, containerClasses, onClick, id, level, label })
       onMouseLeave={handleMouseLeave}
       className={`${
         containerClasses || ""
-      } relative border-[3px] rounded-full border-[#59caff] hover:border-[#051638] transition-all hover:bg-[#051638] w-40 h-40 flex justify-center items-center ${
-        hovered ? "rounded-none" : "rounded-[50%]"
+      } third-icon relative border-[3px] rounded-[50%] border-[#002d80] bg-[#00143a] transition-all hover:bg-[#051638] w-40 h-40 flex justify-center items-center ${
+        hovered ? "rounded-[0%]" : "rounded-[50%]"
       }`}
       onClick={onClick}
     >
-      <i id={id} className={`${className} text-5xl transition-all flex flex-col ${hovered ? "text-3xl translate-y-[-30px]" : "text-4xl translate-y-[0]"} `}>
+      <i id={id} className={`${className} third-devicon text-5xl transition-all flex flex-col ${hovered ? "text-3xl translate-y-[-30px]" : "text-4xl translate-y-[0]"} `}>
         <p
           className={` text-sm font-poppins absolute  bottom-8 left-0 right-0 text-center opacity-0 translate-y-[2.6rem] font-semibold ${
             hovered ? " relative text-sm opacity-[1]" : "text-md opacity-0"
@@ -58,10 +58,10 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="skills mx-auto mb-10 w-[100%] font-poppins mt-52 text-center ">
+    <section className="skills mx-auto mb-10 font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Featured Skills</h2>
 
-      <div className="flex flex-wrap mx-auto w-[60%] gap-10 justify-center">
+      <div className="third-icon-holders flex flex-wrap mx-auto gap-10 justify-center">
         <Icon id={"html"} className="devicon-html5-plain colored" level={90} label={"HTML"} />
         <Icon id={"css"} className="devicon-css3-plain colored" level={90} label={"CSS"} />
         <Icon id={"js"} className="devicon-javascript-plain colored" level={90} label={"JAVASCRIPT"} />
