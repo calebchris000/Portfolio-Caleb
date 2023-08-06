@@ -2,13 +2,12 @@ import PropTypes from "prop-types";
 import { useEffect, useState } from "react";
 import { FadeIn } from "../../app/miscellaneous/FadeIn";
 import ProgressBar from "@ramonak/react-progress-bar";
-const Proficiency = ({ level, className, hovered, title }) => {
+const Proficiency = ({ level, className, hovered }) => {
   return (
-    <div className={`proficiency absolute w-32 opacity-0 transition-all ${className}  h-5 ${hovered ? "opacity-[1] bottom-[1.7rem]" : "opacity-0 bottom-0"}`}>
-      <p className="text-left text-xs mb-1">{title}</p>
+    <div className={`proficiency absolute w-32 opacity-0 transition-all ${className}  h-5 ${hovered ? "opacity-[1] bottom-[1.8rem]" : "opacity-0 bottom-0"}`}>
       <ProgressBar
         completed={level}
-        className={`text-white p-0 text-center w-full border border-[#00143a]`}
+        className={`text-white mx-auto p-0 text-center lg:w-[80%] border w-[40%] border-[#00143a]`}
         barContainerClassName="bg-[#fff] bg-[#59caff] text-white"
         bgColor="#002d80"
         labelSize="14px"
@@ -38,9 +37,9 @@ export const Icon = ({ className, containerClasses, onClick, id, level, label })
       }`}
       onClick={onClick}
     >
-      <i id={id} className={`${className} third-devicon text-5xl transition-all flex flex-col ${hovered ? "text-3xl translate-y-[-30px]" : "text-4xl translate-y-[0]"} `}>
+      <i id={id} className={`${className} third-devicon text-5xl transition-all flex flex-col ${hovered ? "text-3xl hidden lg:translate-y-[-30px]" : "text-4xl block lg:translate-y-[0]"} `}>
         <p
-          className={` text-sm font-poppins absolute  bottom-8 left-0 right-0 text-center opacity-0 translate-y-[2.6rem] font-semibold ${
+          className={` text-sm font-poppins absolute  bottom-8 left-0 right-0 text-center opacity-0 translate-y-[2.6rem] font-semibold hidden lg:block ${
             hovered ? " relative text-sm opacity-[1]" : "text-md opacity-0"
           }`}
         >
@@ -61,7 +60,7 @@ const Skills = () => {
     <section className="skills mx-auto mb-10 font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Featured Skills</h2>
 
-      <div className="third-icon-holders flex flex-wrap mx-auto gap-10 justify-center">
+      <div className="third-icon-holders flex flex-wrap mx-auto lg:w-[80%] gap-10 justify-center">
         <Icon id={"html"} className="devicon-html5-plain colored" level={90} label={"HTML"} />
         <Icon id={"css"} className="devicon-css3-plain colored" level={90} label={"CSS"} />
         <Icon id={"js"} className="devicon-javascript-plain colored" level={90} label={"JAVASCRIPT"} />

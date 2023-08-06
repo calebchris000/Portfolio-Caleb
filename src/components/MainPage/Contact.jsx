@@ -8,7 +8,7 @@ const Contact = () => {
     <section id="contact" className="contact mx-auto mb-10 font-poppins mt-52 text-center">
       <h2 className="text-2xl mb-20">Contact Me</h2>
 
-      <form action="" className="contact mx-auto border border-[#002d80] bg-[#00143a] lg:w-[50%] p-5 px-2">
+      <form action="" className="contact mx-auto border border-[#002d80] bg-[#00143a] lg:w-[36%] p-5 px-2">
         <div className="flex flex-col mx-10 justify-center my-10">
           <label className="text-sm text-left mb-4  font-semibold" htmlFor="name">
             NAME
