@@ -60,7 +60,7 @@ const Skills = () => {
     <section className="skills mx-auto mb-10 font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Featured Skills</h2>
 
-      <div className="third-icon-holders flex flex-wrap mx-auto lg:w-[80%] gap-10 justify-center">
+      <div className="third-icon-holders flex flex-wrap mx-auto lg:w-[70%] gap-10 justify-center">
         <Icon id={"html"} className="devicon-html5-plain colored" level={90} label={"HTML"} />
         <Icon id={"css"} className="devicon-css3-plain colored" level={90} label={"CSS"} />
         <Icon id={"js"} className="devicon-javascript-plain colored" level={90} label={"JAVASCRIPT"} />
