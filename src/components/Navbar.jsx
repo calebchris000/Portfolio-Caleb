@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { BiMenuAltLeft } from "react-icons/bi";
 import "./MainPage/custom.css";
@@ -26,36 +26,9 @@ const NavbarLite = ({ className }) => {
   );
 };
 const Navbar = () => {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [menuToggle, setMenuToggle] = useState(false);
 
-  useEffect(() => {
-    function handleScroll() {
-      const currentPosition = window.pageYOffset;
-      const nav = document.querySelector(".navigation");
-      const navLite = document.querySelector(".navLite");
-      if (currentPosition < prevScrollPos) {
-        nav.classList.add("nav-fixed");
-        navLite.classList.add("nav-fixed");
-        nav.classList.remove("nav-static");
-        setMenuToggle(true);
-        navLite.classList.remove("nav-static");
-      } else if (currentPosition > prevScrollPos) {
-        nav.classList.add("nav-static");
-        navLite.classList.add("nav-static");
-        nav.classList.remove("nav-fixed");
-        navLite.classList.remove("nav-fixed");
 
-        setMenuToggle(false);
-      }
-      setPrevScrollPos(currentPosition);
-    }
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
 
   return (
     <>
