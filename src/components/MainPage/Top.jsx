@@ -57,7 +57,7 @@ const Top = () => {
 
             <button
               className="top-see-resume font-bold flex items-center justify-center gap-3 transition-all w-fit hover:bg-[#fff] hover:text-[#00143a] hover:scale-[1.06] bg-[#0a52da] p-6 px-24"
-              onClick={() => (window.open("https://docs.google.com/document/d/1xxsSqcwstPCdLpu6bZpOuAqogLW0-4398u9ybZOsDls/edit?usp=sharing", '_blank'))}
+              onClick={() => (window.open("https://drive.google.com/file/d/1VSrnM-yxjjYW5XGfvAALc6iPp_ilKkkS/view?usp=sharing", '_blank'))}
             >
               SEE MY RESUME <HiExternalLink className="w-5 h-5" />
             </button> 
