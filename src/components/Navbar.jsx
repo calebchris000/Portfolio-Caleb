@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CiMail } from "react-icons/ci";
 import { BiMenuAltLeft } from "react-icons/bi";
+import PropTypes  from "prop-types";
 import "./MainPage/custom.css";
 
 const NavbarLite = ({ className }) => {
@@ -27,8 +28,6 @@ const NavbarLite = ({ className }) => {
 };
 const Navbar = () => {
   const [menuToggle, setMenuToggle] = useState(false);
-
-
 
   return (
     <>
@@ -62,6 +61,10 @@ const Navbar = () => {
       </nav>
     </>
   );
+};
+
+NavbarLite.propTypes = {
+  className: PropTypes.string.isRequired,
 };
 
 export default Navbar;
