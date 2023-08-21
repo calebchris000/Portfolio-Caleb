@@ -24,15 +24,15 @@ const Card = ({ image, title, description, url, source }) => {
     <div
       onMouseEnter={handleHover}
       onMouseLeave={handleHoverLeave}
-      className={`card-container border-2 flex-wrap cursor-pointer overflow-hidden p-5 border-[#002d80] bg-[#00143a] h-[24rem] w-[20rem] hover:scale-[1.008] transition-all ease-in-out`}
+      className={`relative card-container border-2 flex-wrap cursor-pointer overflow-hidden p-5 border-[#002d80] bg-[#00143a] h-[24rem] w-[20rem] hover:scale-[1.008] transition-all ease-in-out`}
     >
       <img className="w-full" src={image} alt="" />
 
       <div>
-        <h3 className="text-xl text-left text-[#59caff] my-8 mb-2">{title}</h3>
+        <h3 className="text-xl text-left text-[#59caff] my-4 mb-2">{title}</h3>
         <p className="text-left w-[70%] text-[#8b9cbb] text-sm">{description}</p>
       </div>
-      <div className={`gap-2 mt-3 w-full transition-all flex opacity-0 ${hovered && "opacity-[1]"}`}>
+      <div className={`gap-2 absolute left-0 right-0 mx-2 bottom-6 mt-3 w-full transition-all flex opacity-0 ${hovered && "opacity-[1]"}`}>
         <Button url={url} Icon={RiLiveLine} text="SEE LIVE" className="bg-orange-700 hover:bg-orange-900 bottom-3 w-full" />
         <Button url={source} Icon={VscSourceControl} text="SEE SOURCE" className="bg-orange-800 bottom-3 w-full" />
       </div>
@@ -45,7 +45,7 @@ const Second = () => {
     FadeIn(".second");
   }, []);
   return (
-    <section className="second opacity-0 mx-auto relative left-10 mb-10 font-poppins mt-52 text-center ">
+    <section className="second opacity-0 mx-auto relative lg:left-10 mb-10 font-poppins mt-52 text-center ">
       <h2 className="text-2xl mb-20">Highlights of Successful Projects</h2>
       <div className="flex flex-wrap gap-5 mx-auto justify-start">
         <Card
@@ -81,7 +81,7 @@ const Second = () => {
           image={TVSeries}
           source={"https://github.com/calebchris000/Capstone-TV-Series"}
           title="TV Series Watch"
-          description="Track your valuable time with the Pomodoro Timer. Set custom time that fits your schedule."
+          description="Review, Like and comment on your favourite movies."
           url={"https://calebchris000.github.io/Capstone-TV-Series/dist/"}
         />
       </div>
