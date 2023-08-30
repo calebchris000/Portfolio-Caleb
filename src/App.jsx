@@ -1,8 +1,13 @@
 import "./App.css";
-import Main from "./pages/Main";
+import { Router, Route, } from "react-router-dom";
+import Card from "./components/Card";
 
 function App() {
-  return <Main />;
+  return (
+    <Router>
+      <Route path="/" element={''}></Route>
+    </Router>
+  )
 }
 
 export default App;
